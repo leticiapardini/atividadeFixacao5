@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+
+        let fibonatti = [];
+        fibonatti[0] = 0;
+        fibonatti[1] = 1;
+        
+
+        function calculaFibonatti (arrFibonatti, posicaoAtual,elementoMax){
+            arrFibonatti.push(arrFibonatti[posicaoAtual] + arrFibonatti[posicaoAtual -1])
+            if(posicaoAtual == elementoMax -2){
+                return;
+            } else{
+                calculaFibonatti(arrFibonatti,posicaoAtual +1,elementoMax);
+            }
+            
+        };
+
+        calculaFibonatti (fibonatti,1,6);
+        console.log(`Minha função de Fibonatti é: ${fibonatti}, indo até o 6º elemento da função`);
+        
+
+            
+
+    </script>
+</body>
+</html>

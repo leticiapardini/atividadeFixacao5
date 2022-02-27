@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+        pessoa1 = {
+            nome: "Larrissa",
+            peso: 60,
+            altura: 1.65,
+        }
+
+        pessoa2 = {
+            nome: "Rafael",
+            peso: 90,
+            altura: 1.69,
+        }
+
+        pessoa3 = {
+            nome: "Letícia",
+            peso: 61,
+            altura: 1.62,
+        }
+
+        pessoa4 = {
+            nome: "Danielle",
+            peso: 57,
+            altura: 1.58,
+        }
+
+        pessoa5 = {
+            nome: "João",
+            peso: 71,
+            altura: 1.72,
+        }
+        console.log(pessoa1);
+        console.log(pessoa2);
+        console.log(pessoa3);
+        console.log(pessoa4);
+        console.log(pessoa5);
+
+        arrayPessoas = [pessoa1, pessoa2,pessoa3,pessoa4, pessoa5];
+
+        arrayPessoas.map( 
+            function calculaImc (pessoa){
+                pessoa.imc = (pessoa.peso/(pessoa.altura * pessoa.altura));
+            }
+        );
+        console.log("O imc de cada pessoa é:");
+        console.log(arrayPessoas);
+
+        
+        let filtrados = arrayPessoas.filter((pessoa) => {return pessoa.altura > 1.60});
+        console.log("As pessoas que tem altura a cima de 1.60 são: ");
+        console.log(filtrados);
+
+        let somatoriaPesos = arrayPessoas.reduce( (acumulador, pessoaAtual) => acumulador + pessoaAtual.peso, 0);
+        console.log("A somatatória de todos os pesos é:");
+        console.log(somatoriaPesos);
+    </script>
+</body>
+</html>
+
+
+        
